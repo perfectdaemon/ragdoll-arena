@@ -12,10 +12,10 @@ public class MaceController : WeaponController
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        collidedWith = collision.gameObject;
+        collidedWith = collision.gameObject;        
         if (collidedWith.tag == "Enemy")
         {
-            base.OnCollisionWithEnemy(collidedWith);   
+            base.OnCollisionWithEnemy(collidedWith, collision.relativeVelocity.magnitude);   
         }
     }
 }

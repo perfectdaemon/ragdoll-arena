@@ -7,10 +7,14 @@ public class FightEnemyController : MonoBehaviour
 
     private GameObject player;
     private Transform cachedTransform;
+    private Rigidbody2D selfRB;
+
+    private float Health;
 
     [Range(1, 10)]
     public float MaxHealth;
-    public float Health;
+
+    public float Speed = 1;
 
     public event OnEnemyDie OnDie;
 
@@ -34,11 +38,15 @@ public class FightEnemyController : MonoBehaviour
         Health = MaxHealth;
         player = GameObject.FindGameObjectWithTag("Player");
         cachedTransform = this.GetComponent<Transform>();
+        selfRB = this.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        cachedTransform.right = (player.transform.position - cachedTransform.position).normalized;
+        var toPlayer = player.transform.position - cachedTransform.position;
+        toPlayer.Normalize();
+        cachedTransform.right = toPlayer;
+        selfRB.AddForce(toPlayer * Time.deltaTime * Speed, ForceMode2D.Impulse);
     }
 }

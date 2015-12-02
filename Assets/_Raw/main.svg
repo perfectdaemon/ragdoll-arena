@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4142136"
-     inkscape:cx="343.6943"
-     inkscape:cy="874.45894"
+     inkscape:zoom="1"
+     inkscape:cx="250.04322"
+     inkscape:cy="817.67685"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -331,17 +331,9 @@
        id="stick"
        width="99.320938"
        height="11.830868"
-       x="34.138222"
-       y="315.13757"
+       x="404.66217"
+       y="217.55684"
        inkscape:label="#rect3892" />
-    <rect
-       style="fill:#c3c9c0;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       id="rect3899"
-       width="40"
-       height="53"
-       x="284"
-       y="252.86218"
-       ry="7" />
     <rect
        style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
        id="white_rect"
